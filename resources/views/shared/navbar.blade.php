@@ -1,0 +1,15 @@
+<header class="navbar-fixed">
+    <nav class="nav-wrapper navbar-app">
+        <a href="/" class="brand-logo">Support Ticket System</a>
+        <ul class="right hide-on-med-and-down">
+            <li class="active"><a href="/">Inicio</a></li>
+            <li><a href="/acerca">Acerca</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+            <li><a href="#!" class="dropdown-trigger" data-target="dropdown-usuario">Usuario <i class="material-icons right">arrow_drop_down</i></a></li>
+            <ul id="dropdown-usuario" class="dropdown-content">
+                <li><a href="/usuarios/acceso">Acceder</a></li>
+                <li><a href="/usuarios/registro">Registro</a></li>
+            </ul>
+        </ul>
+    </nav>
+</header>
