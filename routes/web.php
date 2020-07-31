@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@home');
 Route::get('/acerca', 'PagesController@about');
-Route::get('/contacto', 'PagesController@contact');
+Route::get('/contacto', 'TicketsController@create');
