@@ -5,7 +5,7 @@
 
 @section('content')
     <div class="row">
-        <form action="/contacto" method="POST" class="col s6 offset-l3 card ticket-create-form" autocomplete="off">
+        <form action="{{ url()->current() }}" method="POST" class="col s6 offset-l3 card ticket-create-form" autocomplete="off">
             <h5 class="col s10 offset-s1">Enviar un nuevo ticket</h5>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="input-field col s10 offset-s1">
