@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@home');
 Route::get('/acerca', 'PagesController@about');
 Route::get('/contacto', 'TicketsController@create');
+Route::post('/contacto', 'TicketsController@store');

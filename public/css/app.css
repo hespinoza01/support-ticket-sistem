@@ -20,6 +20,26 @@
   margin-top: 1rem;
 }
 
+.ticket-create-form .errors-container {
+  color: #e53935;
+}
+
+.ticket-create-form .errors-container p {
+  padding: 0;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.ticket-create-form .errors-container ul {
+  margin: 0;
+  margin-top: 0.5rem;
+  list-style: none;
+}
+
+.ticket-create-form .errors-container ul li {
+  font-size: 0.85rem;
+}
+
 /* label focus color */
 
 .input-field input[type=text]:focus + label,
