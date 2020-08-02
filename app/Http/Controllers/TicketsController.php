@@ -42,4 +42,29 @@ class TicketsController extends Controller
 
         return view('tickets.show', compact('ticket'));
     }
+
+    // Retorna la vista para modificar una ticket existente
+    public function edit($slug) {
+        $ticket = Ticket::where('slug', $slug)->firstOrFail();
+
+        return view('tickets.edit', compact('ticket'));
+    }
+
+    // Recibe los nuevos valores que tendrá el registro a modificar y lo actualiza dentro de la DB
+    public function update($slug, TicketFormRequest $request) {
+        $ticket = Ticket::where('slug', $slug)->firstOrFail();
+
+        $ticket->title = $request->get('title');
+        $ticket->content = $request->get('content');
+        if( $request->get('status') != null ) {
+            $ticket->status = 0;
+        } else {
+            $ticket->status = 1;
+        }
+
+        $ticket->save();
+
+        return redirect(action('TicketsController@edit', $ticket->slug))
+                    ->with('status', '¡El ticket : '.$slug.' se actualizó correctamente.');
+    }
 }

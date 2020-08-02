@@ -18,4 +18,8 @@ Route::get('/acerca', 'PagesController@about');
 Route::get('/contacto', 'TicketsController@create');
 Route::post('/contacto', 'TicketsController@store');
 Route::get('/tickets', 'TicketsController@index');
+
+// Ticket Slug
 Route::get('/ticket/{slug?}', 'TicketsController@show');
+Route::get('/ticket/{slug?}/editar', 'TicketsController@edit');
+Route::post('/ticket/{slug?}/editar', 'TicketsController@update');
