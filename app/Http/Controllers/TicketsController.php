@@ -65,6 +65,6 @@ class TicketsController extends Controller
         $ticket->save();
 
         return redirect(action('TicketsController@edit', $ticket->slug))
-                    ->with('status', '¡El ticket : '.$slug.' se actualizó correctamente.');
+                    ->with('status', 'El ticket : '.$slug.' se actualizó correctamente.');
     }
 }

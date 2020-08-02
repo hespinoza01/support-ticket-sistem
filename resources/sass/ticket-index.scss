@@ -1,0 +1,8 @@
+.ticket-item .btn-detail {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.ticket-item:hover .btn-detail{
+    opacity: 1;
+}

@@ -16,15 +16,22 @@
                         <tr>
                             <th>ID</th>
                             <th>Título</th>
-                            <th>Contenido</th>
+                            <th>Estado</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($tickets as $ticket)
-                            <tr>
+                            <tr class="ticket-item">
                                 <td>{{ $ticket->id }}</td>
-                                <td><a href="{{ action('TicketsController@show', $ticket->slug) }}">{{ $ticket->title }}</a></td>
+                                <td>{{ $ticket->title }}</td>
                                 <td>{{ $ticket->status ? 'Pendiente' : 'Resuelto' }}</td>
+                                <td>
+                                    <a href="{{ action('TicketsController@show', $ticket->slug) }}" class="valign-wrapper green btn-small waves-effect waves-light btn-detail">
+                                        <i class="tiny material-icons right">arrow_forward</i>
+                                        ver detalle
+                                    </a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

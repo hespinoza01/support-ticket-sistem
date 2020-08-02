@@ -47,10 +47,23 @@
   text-align: center;
 }
 
+.ticket-item .btn-detail {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ticket-item:hover .btn-detail {
+  opacity: 1;
+}
+
 /* Padding helpers class */
 
 .pd {
   padding: 1rem !important;
+}
+
+.pd-small {
+  padding: 0.5rem !important;
 }
 
 .pd-2 {
@@ -175,6 +188,10 @@
 
 .fz {
   font-size: 1rem !important;
+}
+
+.fz-small {
+  font-size: 0.75rem !important;
 }
 
 .fz-med {

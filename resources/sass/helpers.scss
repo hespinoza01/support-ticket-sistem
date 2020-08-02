@@ -1,6 +1,10 @@
 /* Padding helpers class */
 .pd {
     padding: 1rem !important;
+    &-small {
+        padding: .5rem !important;
+    }
+
     &-2 {
         padding: 2rem !important;
     }
@@ -113,6 +117,10 @@
 /* Font-sizes helpers */
 .fz {
     font-size: 1rem !important;
+    &-small {
+        font-size: 0.75rem !important;
+    }
+
     &-med {
         font-size: 1.5rem !important;
     }
