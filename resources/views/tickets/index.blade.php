@@ -8,8 +8,12 @@
         <div class="col s8 offset-s2 card pd-top pd-bottom">
             <h5 class="center-align">Tickets</h5>
 
+            @if( session('status') )
+                <p class="success-alert col s10 offset-s1 pd green-text">{{ session('status') }}</p>
+            @endif
+
             @if( $tickets->isEmpty() )
-                <p class="center-align">Todavía no hay tickets guardadas :(</p>
+                <p class="col s10 offset-s1 center-align mg-top">Todavía no hay tickets guardadas :(</p>
             @else
                 <table class="col s10 offset-s1 mg-top mg-bottom striped responsive-table">
                     <thead>

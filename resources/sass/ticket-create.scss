@@ -33,11 +33,11 @@
             }
         }
     }
+}
 
-    .success-alert {
-        padding: .65rem;
-        border-radius: 3px;
-        background-color: rgba(174, 213, 129, .5);
-        text-align: center;
-    }
+.success-alert {
+    padding: .65rem;
+    border-radius: 3px;
+    background-color: rgba(174, 213, 129, .5) !important;
+    text-align: center;
 }

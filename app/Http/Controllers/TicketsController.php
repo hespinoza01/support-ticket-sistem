@@ -67,4 +67,18 @@ class TicketsController extends Controller
         return redirect(action('TicketsController@edit', $ticket->slug))
                     ->with('status', 'El ticket : '.$slug.' se actualizó correctamente.');
     }
+
+    public function checkdelete($slug) {
+        $ticket = Ticket::where('slug', $slug)->firstOrFail();
+
+        return view('tickets.delete', compact('ticket'));
+    }
+
+    public function delete($slug) {
+        $ticket = Ticket::where('slug', $slug)->firstOrFail();
+        $ticket->delete();
+
+        return redirect(action('TicketsController@index'))
+                    ->with('status', 'El ticket: '.$slug.' se eliminó correctamente.');
+    }
 }

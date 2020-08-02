@@ -40,10 +40,10 @@
   font-size: 0.85rem;
 }
 
-.ticket-create-form .success-alert {
+.success-alert {
   padding: 0.65rem;
   border-radius: 3px;
-  background-color: rgba(174, 213, 129, 0.5);
+  background-color: rgba(174, 213, 129, 0.5) !important;
   text-align: center;
 }
 

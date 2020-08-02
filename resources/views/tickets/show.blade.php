@@ -13,7 +13,7 @@
                 <p class="mg-bottom-2">{{ $ticket->content }}</p>
 
                 <div class="col s6 offset-s7">
-                    <a class="waves-effect waves-green grey lighten-5 green-text btn mg-right" href="#">Eliminar</a>
+                    <a class="waves-effect waves-green grey lighten-5 green-text btn mg-right" href="{{ action('TicketsController@checkdelete', $ticket->slug) }}">Eliminar</a>
                     <a class="waves-effect waves-light green btn" href="{{ action('TicketsController@edit', $ticket->slug)  }}">Editar</a>
                 </div>
             </div>

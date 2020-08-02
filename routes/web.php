@@ -23,3 +23,5 @@ Route::get('/tickets', 'TicketsController@index');
 Route::get('/ticket/{slug?}', 'TicketsController@show');
 Route::get('/ticket/{slug?}/editar', 'TicketsController@edit');
 Route::post('/ticket/{slug?}/editar', 'TicketsController@update');
+Route::get('/ticket/{slug?}/eliminar', 'TicketsController@checkdelete');
+Route::post('/ticket/{slug?}/eliminar', 'TicketsController@delete');
