@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\TicketFormRequest;
 use App\Ticket;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class TicketsController extends Controller
 {
@@ -25,6 +26,16 @@ class TicketsController extends Controller
         ));
 
         $ticket->save();
+
+        // Código para envío de los correos de notificación
+        $data = array(
+            'ticket' => $slug,
+        );
+
+        Mail::send('emails.newticket', $data, function ($message) {
+            $message->from('haroldesptru@gmail.com', 'Support Ticket System');
+            $message->to('haroldesptru@gmail.com')->subject('¡Hay un nuevo ticket!');
+        });
 
         return redirect('/contacto')->with('status', '¡Su ticket se creó satisfactoriamente! El código de su solicitud es: '.$slug);
     }
