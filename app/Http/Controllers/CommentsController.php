@@ -11,7 +11,8 @@ class CommentsController extends Controller
     public function newComment(CommentsFormRequest $request) {
         $comment = new Comment(array(
             'post_id' => $request->get('post_id'),
-            'content' => $request->get('content')
+            'content' => $request->get('content'),
+            'user_id' => -1
         ));
 
         $comment->save();

@@ -26,3 +26,6 @@ Route::get('/ticket/{slug?}/editar', 'TicketsController@edit');
 Route::post('/ticket/{slug?}/editar', 'TicketsController@update');
 Route::get('/ticket/{slug?}/eliminar', 'TicketsController@checkdelete');
 Route::post('/ticket/{slug?}/eliminar', 'TicketsController@delete');
+
+// Comments Routes
+Route::post('/comentario', 'CommentsController@newComment');

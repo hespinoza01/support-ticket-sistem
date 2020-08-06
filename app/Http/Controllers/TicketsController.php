@@ -50,8 +50,9 @@ class TicketsController extends Controller
     // Muestra el detalle de un ticket en específico según su código único recibido
     public function show($slug) {
         $ticket = Ticket::where('slug', $slug)->firstOrFail();
+        $comments = $ticket->comments()->get();
 
-        return view('tickets.show', compact('ticket'));
+        return view('tickets.show', compact('ticket', 'comments'));
     }
 
     // Retorna la vista para modificar una ticket existente
